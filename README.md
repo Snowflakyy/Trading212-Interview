@@ -7,7 +7,7 @@ A **Spring Boot** application handling **WebSocket real-time updates** and runni
 - **Frontend WebSocket:** `ws://localhost:8080/api/v1/ws/crypto`
 
 All business logic resides in the **backend**.
-
+### Future update: Junit tests
 ---
 
 ## Endpoints
