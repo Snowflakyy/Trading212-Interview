@@ -1,10 +1,24 @@
 package com.project.trading212.backend.model;
 
 import com.project.trading212.backend.model.enumeration.TransactionType;
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import org.hibernate.annotations.CreationTimestamp;
-import org.springframework.data.annotation.CreatedDate;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -21,13 +35,13 @@ public class TransactionEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Enumerated(EnumType.STRING)
-    @Column(name = "transaction_type",nullable = false)
+    @Column(name = "transaction_type", nullable = false)
     private TransactionType transactionType;
     @Column(name = "quantity", nullable = false)
     private BigDecimal quantity;
     @Column(name = "price_purchased", nullable = false)
     private BigDecimal pricePurchased;
-    @Column(name = "created_date",nullable = false)
+    @Column(name = "created_date", nullable = false)
     @CreationTimestamp
     private LocalDateTime createdDate;
     @ManyToOne()

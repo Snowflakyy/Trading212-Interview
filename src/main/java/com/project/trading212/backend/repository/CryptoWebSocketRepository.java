@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface CryptoWebSocketRepository extends JpaRepository<CryptoWebSocketEntity,Long> {
+public interface CryptoWebSocketRepository extends JpaRepository<CryptoWebSocketEntity, Long> {
     Optional<CryptoWebSocketEntity> findBySymbol(String symbol);
 }

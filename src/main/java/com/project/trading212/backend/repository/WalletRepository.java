@@ -11,7 +11,6 @@ import java.util.Optional;
 @Repository
 public interface WalletRepository extends JpaRepository<WalletEntity,Long> {
     @Lock(LockModeType.OPTIMISTIC)
-    Optional<WalletEntity> findById(Long id);
     Optional<WalletEntity> findByWalletName(String name);
-    void removeWalletEntityById(Long id);
+
 }

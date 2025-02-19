@@ -3,7 +3,6 @@ package com.project.trading212.backend.util.serializer;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
-import org.springframework.format.datetime.DateFormatter;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -15,9 +14,9 @@ public class CustomDateSerializer extends JsonSerializer<LocalDateTime> {
 
     @Override
     public void serialize(LocalDateTime localDateTime, JsonGenerator jsonGenerator, SerializerProvider serializerProvider) throws IOException {
-        if(localDateTime==null){
+        if (localDateTime == null) {
             jsonGenerator.writeNull();
-        }else{
+        } else {
             jsonGenerator.writeString(formatter.format(localDateTime));
         }
     }

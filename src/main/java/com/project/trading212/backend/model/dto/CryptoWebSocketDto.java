@@ -1,9 +1,13 @@
 package com.project.trading212.backend.model.dto;
 
-import lombok.*;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.Builder;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,6 +18,5 @@ public class CryptoWebSocketDto {
     private String name;
     private String symbol;
     private BigDecimal price;
-    private LocalDateTime lastUpdated;
 }
 

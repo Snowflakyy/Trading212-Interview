@@ -4,13 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class CryptoMapping {
-    private static final Map<String,String> symbolToName = new HashMap<>();
+public class CryptoInitializerClass {
+    private static final Map<String, String> symbolToName = new HashMap<>();
 
-    static{
+    static {
         symbolToName.put("BTC/USD", "Bitcoin");
         symbolToName.put("WBTC/USD", "Wrapped Bitcoin");
-        symbolToName.put("tBTC/USD", "tBitcoin");
+        symbolToName.put("TBTC/USD", "tBitcoin");
         symbolToName.put("YFI/USD", "Yearn Finance");
         symbolToName.put("PAXG/USD", "PAX Gold");
         symbolToName.put("ETH/USD", "Ethereum");
@@ -30,7 +30,7 @@ public class CryptoMapping {
     }
 
     public static String getFullName(String symbol) {
-        return symbolToName.getOrDefault(symbol,symbol);
+        return symbolToName.getOrDefault(symbol, symbol);
     }
 
     public static Set<String> getAllSymbols() {

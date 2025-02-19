@@ -7,6 +7,8 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface TransactionRepository extends JpaRepository<TransactionEntity,Long> {
+public interface TransactionRepository extends JpaRepository<TransactionEntity, Long> {
     Optional<TransactionEntity> findByWallet_WalletNameAndCryptoWebSocket_Symbol(String walletName, String cryptoSymbol);
+
+    int deleteAllByWallet_WalletName(String walletName);
 }

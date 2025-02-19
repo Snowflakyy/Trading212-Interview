@@ -14,4 +14,7 @@ public class WalletResponseDto {
     private Long walletId;
     private String walletName;
     private BigDecimal walletBalance;
+    private BigDecimal totalReturn;
+    private BigDecimal totalReturnPercentage;
+    private boolean isProfit;
 }

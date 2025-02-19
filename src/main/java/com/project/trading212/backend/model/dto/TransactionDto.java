@@ -3,7 +3,11 @@ package com.project.trading212.backend.model.dto;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.project.trading212.backend.model.enumeration.TransactionType;
 import com.project.trading212.backend.util.serializer.CustomDateSerializer;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
